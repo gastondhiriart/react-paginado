@@ -1,5 +1,6 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -17,7 +18,17 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "complexity": {
+        "noForEach": "warn"
+      },
+      "style": {
+        "useConst": "warn"
+      },
+      "recommended": true,
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error"
+      }
     },
     "domains": {
       "next": "recommended",
