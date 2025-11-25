@@ -5,7 +5,12 @@ const nextConfig = {
     "react-compiler/react-compiler": "error",
   },
   images: {
-    domains: ["images.unsplash.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
 };
 
